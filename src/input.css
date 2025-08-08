@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+
+@theme {
+  --color-primary: #08223C;
+  --color-green: #B47B43;
+  --color-orange: #E9CC8D;
+  --font-display: 'Cinzel Bold(RUS BY LYAJKA)';
+  --text-15: 0.9375rem;
+  --text-30: 1.875rem;
+}
+
+
+@layer base {
+  html {
+    @apply scroll-smooth
+  }
+
+  body {
+    @apply  bg-primary text-white font-display overflow-x-hidden
+  }
+
+  button {
+    @apply cursor-pointer
+  }
+}
+
+@utility container-base {
+  @apply max-w-296 mx-auto px-5
+}

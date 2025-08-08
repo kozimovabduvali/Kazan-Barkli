@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Cinzel Bold(RUS BY LYAJKA)';
+    src: url('Cinzel-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cinzel(RUS BY LYAJKA)';
+    src: url('Cinzel-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
