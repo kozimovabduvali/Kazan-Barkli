@@ -15,6 +15,11 @@
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <style>
+    [x-cloak] {
+      display: none !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -52,15 +57,12 @@
         </a>
       </div>
     </nav>
-
-    <!-- mobile modal -->
-    <div class="fixed inset-0 z-[60] size-full bg-primary/60 transition-opacity duration-300" x-show="openMenu"
+    <div class="fixed inset-0 z-[60] size-full bg-primary/60 transition-opacity duration-300" x-show="openMenu" x-cloak
       x-transition.opacity @click="openMenu = false">
     </div>
-
     <!-- Mobile Menu -->
     <div
-      class="absolute z-[70] top-0 left-0 bg-[#0B2E51] w-full max-w-127.25 min-h-full h-screen overflow-y-auto xl:pl-36 xl:pr-27 transition-transform duration-300"
+      class="absolute -translate-x-full z-[70] top-0 left-0 bg-[#0B2E51] w-full max-w-127.25 min-h-full h-screen overflow-y-auto xl:pl-36 xl:pr-27 transition-transform duration-300"
       :class="openMenu ? 'translate-x-0' : '-translate-x-full'" x-cloak>
       <div class="px-5 py-5 lg:py-8 font-montserrat">
         <button class="close-btn -ml-2.5" @click="openMenu = false" aria-label="Close menu">
