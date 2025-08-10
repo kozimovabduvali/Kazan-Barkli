@@ -43,15 +43,18 @@
 
 
 .kazan-swipe__main .swiper-button-next::after,
-.kazan-swipe__main .swiper-button-prev::after,
+.swiper-button-prev::after,
 .swiper-button-prev-rezi::after,
-.swiper-button-next-rezi::after {
+.swiper-button-next-rezi::after,
+.swiper-button-prev-hod::after,
+.swiper-button-next-hod::after
+{
   content: '';
   @apply !hidden;
 }
 
 
-.swiper-kazan-rezi .swiper-button-disabled,
-.swiper-kazan-rezi .swiper-button-disabled {
+.swiper-kazan-rezi  .swiper-button-disabled,
+.swiper-kazan-hod .swiper-button-disabled {
   @apply !cursor-default !opacity-60 
 }

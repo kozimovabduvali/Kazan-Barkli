@@ -2,7 +2,7 @@ let swiper = new Swiper(".kazan-swipe__hero", {
   loop: true,
   spaceBetween: 20,
   autoplay: {
-    delay: 3000,
+    delay: 2000,
     // disableOnInteraction: false,
   },
   breakpoints: {
@@ -25,7 +25,7 @@ let kazanSwiperMain = new Swiper('.kazan-swipe__main', {
   // loop: true,
   slideToClickedSlide: true,
   autoplay: {
-    delay: 3000,
+    delay: 2500,
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -64,5 +64,23 @@ let kazanSwiperRez = new Swiper('.kazan-swipe__rez', {
   navigation: {
     nextEl: ".swiper-button-next-rezi",
     prevEl: ".swiper-button-prev-rezi",
+  },
+});
+
+
+
+let kazanSwiperhod = new Swiper('.kazan-swipe__hod', {
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+  },
+  autoplay: {
+    delay: 3500,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next-hod",
+    prevEl: ".swiper-button-prev-hod",
   },
 });
