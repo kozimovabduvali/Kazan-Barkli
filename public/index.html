@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="./css/output.css" />
   <!-- Font -->
   <link rel="stylesheet" href="./font/demo.html">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-sA+g/1kQbqZ5bFZ8qX1bYwzY1FQvM4k9v+8m0R8jv+8=" crossorigin="" />
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -149,7 +153,7 @@
     <!-- Резиденции -->
     <section class="mb-16 lg:mb-27">
       <div class="container-base px-5">
-        <h2 class="text-orange uppercase text-xl md:text-30 lg:text-40 text-center mb-5 md:mb-9">
+        <h2 class="text-orange uppercase text-xl md:text-30 lg:text-40 text-center mb-5 md:mb-16">
           Резиденции
         </h2>
       </div>
@@ -293,7 +297,7 @@
     <!-- Ход строительства -->
     <section class="mb-16 lg:mb-27">
       <div class="container-base px-5">
-        <h2 class="text-orange uppercase text-xl md:text-30 lg:text-40 text-center mb-5 md:mb-9">
+        <h2 class="text-orange uppercase text-xl md:text-30 lg:text-40 text-center mb-5 md:mb-9 lg:mb-18">
           Ход строительства
         </h2>
       </div>
@@ -388,13 +392,6 @@
                       <!-- 2023 -->
                       <div class="space-y-1 flex flex-col items-center">
                         <p class="text-15">2023</p>
-                        <span class="block w-0.5 h-5 bg-white"></span>
-                        <span class="block size-2 rounded-full bg-white"></span>
-                        <span class="block w-0.5 h-5 bg-white"></span>
-                        <span class="block size-2 rounded-full bg-white"></span>
-                        <span class="block w-0.5 h-5 bg-white"></span>
-                        <span class="block size-2 rounded-full bg-white"></span>
-                        <span class="block w-0.5 h-5 bg-white"></span>
                       </div>
                     </div>
                   </div>
@@ -488,13 +485,6 @@
                       <!-- 2023 -->
                       <div class="space-y-1 flex flex-col items-center">
                         <p class="text-15">2023</p>
-                        <span class="block w-0.5 h-5 bg-white"></span>
-                        <span class="block size-2 rounded-full bg-white"></span>
-                        <span class="block w-0.5 h-5 bg-white"></span>
-                        <span class="block size-2 rounded-full bg-white"></span>
-                        <span class="block w-0.5 h-5 bg-white"></span>
-                        <span class="block size-2 rounded-full bg-white"></span>
-                        <span class="block w-0.5 h-5 bg-white"></span>
                       </div>
                     </div>
                   </div>
@@ -588,13 +578,6 @@
                       <!-- 2023 -->
                       <div class="space-y-1 flex flex-col items-center">
                         <p class="text-15">2023</p>
-                        <span class="block w-0.5 h-5 bg-white"></span>
-                        <span class="block size-2 rounded-full bg-white"></span>
-                        <span class="block w-0.5 h-5 bg-white"></span>
-                        <span class="block size-2 rounded-full bg-white"></span>
-                        <span class="block w-0.5 h-5 bg-white"></span>
-                        <span class="block size-2 rounded-full bg-white"></span>
-                        <span class="block w-0.5 h-5 bg-white"></span>
                       </div>
                     </div>
                   </div>
@@ -617,6 +600,128 @@
                 stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </button>
+        </div>
+      </div>
+    </section>
+    <!-- Документация -->
+    <section class="mb-16 lg:mb-27">
+      <div class="container-base px-5">
+        <h2 class="text-orange uppercase text-xl md:text-30 lg:text-40 text-center mb-5 md:mb-9 lg:mb-14">
+          Документация
+        </h2>
+        <div
+          class="font-montserrat flex max-md:flex-col items-center max-lg:justify-center gap-x-16 xl:gap-x-25 gap-y-7">
+          <a href="#"
+            class="font-medium underline underline-offset-2 lg:text-[22px] transition duration-300 hover:text-orange">
+            Проектная декларация
+          </a>
+          <a href="#"
+            class="font-medium underline underline-offset-2 lg:text-[22px] transition duration-300 hover:text-orange">
+            Разрешения
+          </a>
+
+          <button
+            class="xl:ml-20 bg-white text-[#171617] lg:text-lg leading-none font-semibold py-3.5 px-7 lg:px-10 transition duration-300 hover:text-green">
+            Наш.дом.рф
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Документация -->
+    <section class="mb-12 lg:mb-18">
+      <div class="container-base px-5">
+        <h2 class="text-orange uppercase text-xl md:text-30 lg:text-40 text-center mb-5 md:mb-9 lg:mb-12">
+          Расположение
+        </h2>
+        <div class="font-montserrat flex max-md:flex-col justify-between gap-x-7 gap-y-10">
+          <!-- Left -->
+          <div class="md:max-w-147 w-full">
+            <p class="max-md:text-sm md:leading-6.25">
+              Резиденция расположена в историческом сердце Казани  — в месте, где пространство говорит с тобой на языке
+              культуры, памяти и внутренней тишины. <br><br>
+              <strong>Пешком:</strong> <br>
+              - 5 минут до станции метро «Суконная слобода»
+              - 10 минут до набережной озера Кабан
+              - 20 минут до нового Театра Камала <br><br>
+              <strong>На авто:</strong> <br>
+              Выезд на ключевые магистрали за 7 минут
+              - 25 минут до аэропорта и МВЦ «Казань Экспо»
+              - 10-15 минут до набережной, экстрим-парка УРАМ и стадиона «АкБарс Арена». <br><br>
+              В сложившейся инфраструктуре района – городские парковые зоны, торговые центры, удобные транспортные
+              развязки и разнообразные рестораны.
+            </p>
+          </div>
+          <!-- Right -->
+          <div class="inline-block h-max max-md:mx-auto bg-[#0c0f1e] border border-orange overflow-hidden p-3">
+            <div class="max-w-110 max-h-100 md:max-h-127 overflow-hidden size-full border-4 border-orange">
+              <img class="object-cover size-full" src="./assets/images/loc-img.png" alt="img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="mb-16 lg:mb-27">
+      <div class="container-base px-5">
+        <h2 class="text-orange uppercase text-xl md:text-30 lg:text-40 text-center mb-6">
+          Контакты
+        </h2>
+        <div class="font-montserrat">
+          <div class="space-y-3 lg:space-y-6 mb-9">
+            <a class="flex items-center gap-2 lg:text-[22px] transition duration-300 hover:text-orange" href="#">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M26.25 12.5C26.25 21.25 15 28.75 15 28.75C15 28.75 3.75 21.25 3.75 12.5C3.75 9.51631 4.93526 6.65483 7.04505 4.54505C9.15483 2.43526 12.0163 1.25 15 1.25C17.9837 1.25 20.8452 2.43526 22.955 4.54505C25.0647 6.65483 26.25 9.51631 26.25 12.5Z"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M15 16.25C17.0711 16.25 18.75 14.5711 18.75 12.5C18.75 10.4289 17.0711 8.75 15 8.75C12.9289 8.75 11.25 10.4289 11.25 12.5C11.25 14.5711 12.9289 16.25 15 16.25Z"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              Казань, ул. Островского, д. 15
+            </a>
+
+            <a class="flex items-center gap-2 lg:text-[22px] transition duration-300 hover:text-orange"
+              href="+78434569012">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.87808 3.32152C9.49842 2.37238 8.57915 1.75 7.55688 1.75H4.11842C2.81038 1.75 1.75 2.81012 1.75 4.11816C1.75 15.2365 10.7635 24.25 21.8818 24.25C23.1899 24.25 24.25 23.1895 24.25 21.8815L24.2506 18.4424C24.2506 17.4202 23.6284 16.5011 22.6792 16.1214L19.3837 14.8037C18.5311 14.4626 17.5604 14.6161 16.8549 15.204L16.0044 15.9133C15.0111 16.7411 13.5495 16.6753 12.6352 15.761L10.2403 13.3638C9.32598 12.4495 9.25842 10.9892 10.0862 9.99585L10.7954 9.14537C11.3833 8.43994 11.5381 7.46895 11.1971 6.61636L9.87808 3.32152Z"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              +7 843 456 90 12
+            </a>
+          </div>
+          <div class="flex max-lg:flex-col justify-between gap-x-8.5 gap-y-10">
+            <!-- left -->
+            <div class="max-lg:mx-auto md:max-w-147 w-full aspect-square rounded-2xl overflow-hidden">
+              <div class="size-full object-cover" id="map"></div>
+            </div>
+
+            <!-- Right -->
+            <form class="flex-1 max-w-147 lg:max-w-115 max-lg:mx-auto w-full space-y-4 text-white/30">
+
+              <input type="text" placeholder="Ваше имя"
+                class="w-full p-3 lg:p-3.75 border-2 border-white/30 focus:outline-none focus:outline" required>
+
+              <input type="tel" placeholder="Телефон"
+                class="w-full p-3 lg:p-3.75 border-2 border-white/30 focus:outline-none focus:outline" required>
+
+              <textarea placeholder="Сообщение"
+                class="w-full p-3 lg:p-3.75 border-2 border-white/30 focus:outline-none focus:outline min-h-50"></textarea>
+
+              <button type="submit"
+                class="bg-white text-[#171617] lg:text-lg leading-none font-semibold py-3.5 px-7 lg:px-10 transition duration-300 hover:text-green">
+                Оставить заявку
+              </button>
+              <!-- Custom checkbox -->
+              <div class="cursor-pointer flex items-start space-x-2 select-none">
+                <input type="checkbox" id="select-all" class="cursor-pointer checkbox-custom">
+                <label for="select-all" class="cursor-pointer custom-label text-sm">
+                  Нажимая на «Оставить заявку», вы принимаете условия обработки персональных данных и политики конфиденциальности.
+                </label>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -665,6 +770,9 @@
       </div>
     </div>
   </footer>
+
+  <!-- Map  -->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 

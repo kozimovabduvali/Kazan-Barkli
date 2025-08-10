@@ -84,3 +84,15 @@ let kazanSwiperhod = new Swiper('.kazan-swipe__hod', {
     prevEl: ".swiper-button-prev-hod",
   },
 });
+
+
+
+ymaps.ready(init);
+function init() {
+  var map = new ymaps.Map("map", {
+    center: [55.76, 37.64],
+    zoom: 10
+  });
+  var placemark = new ymaps.Placemark([55.76, 37.64]);
+  map.geoObjects.add(placemark);
+}
