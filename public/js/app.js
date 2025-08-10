@@ -37,3 +37,32 @@ let kazanSwiperMain = new Swiper('.kazan-swipe__main', {
     },
   },
 });
+
+
+let kazanSwiperRez = new Swiper('.kazan-swipe__rez', {
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    640: {
+      slidesPerView: 1.3,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 1.7,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    }
+  },
+  autoplay: {
+    delay: 3000,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next-rezi",
+    prevEl: ".swiper-button-prev-rezi",
+  },
+});

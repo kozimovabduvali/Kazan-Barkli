@@ -34,18 +34,24 @@
 
 .kazan-swipe__main .swiper-slide-prev,
 .kazan-swipe__main .swiper-slide-next {
-  @apply !h-30 opacity-50 scale-75;
+  @apply opacity-50 scale-75;
 }
 
 .kazan-swipe__main .swiper-slide-active {
-  @apply !h-50 opacity-100 !scale-100;
+  @apply opacity-100 !scale-100;
 }
 
 
 .kazan-swipe__main .swiper-button-next::after,
-.kazan-swipe__main .swiper-button-prev::after {
+.kazan-swipe__main .swiper-button-prev::after,
+.swiper-button-prev-rezi::after,
+.swiper-button-next-rezi::after {
   content: '';
   @apply !hidden;
 }
 
 
+.swiper-kazan-rezi .swiper-button-disabled,
+.swiper-kazan-rezi .swiper-button-disabled {
+  @apply !cursor-default !opacity-60 
+}
