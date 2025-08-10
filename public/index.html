@@ -18,10 +18,10 @@
 </head>
 
 <body>
-  <header>
+  <header x-data="{ openMenu: false }" x-effect="document.body.classList.toggle('overflow-hidden', openMenu)">
     <nav class="container-base flex max-md:flex-row-reverse items-center justify-between gap-5 py-3 lg:pt-7">
       <!-- Menu Btn -->
-      <button>
+      <button @click="openMenu = true" aria-label="Open menu">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 lg:w-10 h-4 lg:h-5.5" viewBox="0 0 40 22" fill="none">
           <rect width="40" height="2" fill="white" />
           <rect y="10" width="40" height="2" fill="white" />
@@ -29,7 +29,7 @@
         </svg>
       </button>
 
-      <a href="#">
+      <a class="ml-[70px] max-[499px]:ml-0" href="#">
         <img class="h-16 md:h-29" src="./assets/icons/logo.svg" alt="Logo">
       </a>
 
@@ -52,8 +52,52 @@
         </a>
       </div>
     </nav>
-  </header>
 
+    <!-- mobile modal -->
+    <div class="fixed inset-0 z-[60] size-full bg-primary/60 transition-opacity duration-300" x-show="openMenu"
+      x-transition.opacity @click="openMenu = false">
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+      class="absolute z-[70] top-0 left-0 bg-[#0B2E51] w-full max-w-127.25 min-h-full h-screen overflow-y-auto xl:pl-36 xl:pr-27 transition-transform duration-300"
+      :class="openMenu ? 'translate-x-0' : '-translate-x-full'" x-cloak>
+      <div class="px-5 py-5 lg:py-8 font-montserrat">
+        <button class="close-btn -ml-2.5" @click="openMenu = false" aria-label="Close menu">
+          <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="13.4355" y="41.7193" width="40" height="2" transform="rotate(-45 13.4355 41.7193)"
+              fill="#D9D9D9" />
+            <rect x="14.8496" y="13.4351" width="40" height="2" transform="rotate(45 14.8496 13.4351)" fill="#D9D9D9" />
+          </svg>
+        </button>
+
+        <div class="space-y-2 lg:space-y-4 flex flex-col">
+          <a class="transition duration-300 hover:text-orange lg:text-[25px]" href="#">Главная</a>
+          <a class="transition duration-300 hover:text-orange lg:text-[25px]" href="#">Схема здания</a>
+          <a class="transition duration-300 hover:text-orange lg:text-[25px]" href="#">Локация</a>
+          <a class="transition duration-300 hover:text-orange lg:text-[25px]" href="#">Галерея</a>
+          <a class="transition duration-300 hover:text-orange lg:text-[25px]" href="#">Апартаменты</a>
+          <a class="transition duration-300 hover:text-orange lg:text-[25px]" href="#">Условия</a>
+          <a class="transition duration-300 hover:text-orange lg:text-[25px]" href="#">Ход строительства</a>
+          <a class="transition duration-300 hover:text-orange lg:text-[25px]" href="#">Документация</a>
+          <a class="transition duration-300 hover:text-orange lg:text-[25px]" href="#">Контакты</a>
+        </div>
+
+        <div class="flex items-center gap-2.5 mt-7 lg:mt-12.5">
+          <a class="transition duration-300 hover:text-orange" href="#">
+            <!-- Instagram SVG -->
+          </a>
+          <a class="transition duration-300 hover:text-orange" href="#">
+            <!-- Telegram SVG -->
+          </a>
+        </div>
+
+        <a class="transition duration-300 hover:text-orange lg:text-[25px] font-bold block mt-4 lg:mt-9" href="#">
+          +7 843 456 90 12
+        </a>
+      </div>
+    </div>
+  </header>
 
   <main>
     <!-- Hero -->
@@ -717,7 +761,8 @@
               <div class="cursor-pointer flex items-start space-x-2 select-none">
                 <input type="checkbox" id="select-all" class="cursor-pointer checkbox-custom">
                 <label for="select-all" class="cursor-pointer custom-label text-sm">
-                  Нажимая на «Оставить заявку», вы принимаете условия обработки персональных данных и политики конфиденциальности.
+                  Нажимая на «Оставить заявку», вы принимаете условия обработки персональных данных и политики
+                  конфиденциальности.
                 </label>
               </div>
             </form>
